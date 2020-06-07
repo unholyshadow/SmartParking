@@ -1,2 +1,0 @@
-# SmartParking
-Prototipo
