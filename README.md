@@ -3,7 +3,7 @@ Clonar este proyecto
 1. Installar Git
 	https://git-scm.com/download/win
 	
-2. 
+2. Clonar el proyecto
 	git clone https://github.com/unholyshadow/SmartParking.git
 	cd SmartParking
 
