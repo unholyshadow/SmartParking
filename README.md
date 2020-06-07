@@ -4,7 +4,9 @@ Clonar este proyecto
 	https://git-scm.com/download/win
 	
 2. Clonar el proyecto
+
 	git clone https://github.com/unholyshadow/SmartParking.git
+	
 	cd SmartParking
 
 Desarrollar con Phonegap
