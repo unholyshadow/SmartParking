@@ -24,55 +24,23 @@
 <head>
     <meta charset="utf-8" />
     
-    <title>Smart Parking</title>
+    <title>Create account Facebook</title>
 	<link rel="stylesheet" href="onsen/css/onsenui.css">
 	<link rel="stylesheet" href="onsen/onsen-css-components.min.css">
 	<script src="onsen/js/onsenui.min.js"></script>
 </head>
-
+<ons-navigator swipeable id="myNavigator" page="app_create_new_account_facebook.html"></ons-navigator>
 <ons-page id="home">
   <ons-toolbar id="home-toolbar">
-    <div class="center">Smart Parking Proto</div>
+  <div class="left">
+		<ons-back-button>Back</ons-back-button>
+	</div>
+    <div class="center">Smart Parking Login menu</div>
   </ons-toolbar>
 
   <ons-card>
-    <img src="img/parking_logo.png" alt="Onsen UI" style="width: 100%"/>
+    <img src="img/facebook-login-implementation.png" alt="Onsen UI" style="width: 100%"/>
 
-	
-  <script>
-    const login = () => {
-      const username = document.querySelector('#username').value;
-      const password = document.querySelector('#password').value;
-
-      if (username === '' && password === '') {
-        // call the navigator to move to the new page
-        const navigator = document.querySelector('#navigator');
-        navigator.resetToPage('home.html');
-      } else {
-        ons.notification.alert('Wrong username/password combination');
-      }
-    };
-  </script>
-  
-  <div style="text-align: center; margin-top: 10px">
-  <p>
-    <ons-input id="username" placeholder="Username" modifier="underbar"></ons-input>
-  </p>
-
-  <p>
-    <ons-input
-      id="password"
-      placeholder="Password"
-      type="password"
-      modifier="underbar"
-    >
-    </ons-input>
-  </p>
-
-  <p>
-    <ons-button onclick="login()">Login</ons-button>
-  </p>
-  </div>
  </ons-card>
 
 </ons-page>
