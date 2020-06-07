@@ -40,20 +40,56 @@
 
     <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
     <title>Smart Parking</title>
-	
-	<link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
-	<script
-	  src="https://code.jquery.com/jquery-3.1.1.min.js"
-	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-	  crossorigin="anonymous"></script>
-	<script src="semantic/semantic.min.js"></script>
+	<link rel="stylesheet" href="onsen/css/onsenui.css">
+	<link rel="stylesheet" href="onsen/onsen-css-components.min.css">
+	<script src="onsen/js/onsenui.min.js"></script>
 </head>
 
-<body>
-    <h1>Smart Parking</h1>
-	<div class="ui small image">
-		<img src="img/parking_logo.png">
-	</div>
-</body>
+<ons-page id="home">
+  <ons-toolbar id="home-toolbar">
+    <div class="center">Smart Parking Proto</div>
+  </ons-toolbar>
+
+  <ons-card>
+    <img class="center" src="img/parking_logo.png"/>
+
+	
+  <script>
+    const login = () => {
+      const username = document.querySelector('#username').value;
+      const password = document.querySelector('#password').value;
+
+      if (username === '' && password === '') {
+        // call the navigator to move to the new page
+        const navigator = document.querySelector('#navigator');
+        navigator.resetToPage('home.html');
+      } else {
+        ons.notification.alert('Wrong username/password combination');
+      }
+    };
+  </script>
+  
+  <div style="text-align: center; margin-top: 10px">
+  <p>
+    <ons-input id="username" placeholder="Username" modifier="underbar"></ons-input>
+  </p>
+
+  <p>
+    <ons-input
+      id="password"
+      placeholder="Password"
+      type="password"
+      modifier="underbar"
+    >
+    </ons-input>
+  </p>
+
+  <p>
+    <ons-button onclick="login()">Sign in</ons-button>
+  </p>
+  </div>
+ </ons-card>
+
+</ons-page>
 
 </html>
